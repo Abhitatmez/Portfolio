@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Your Portfolio - macOS Style</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Menu Bar -->
+    <div class="menu-bar">
+        <div class="left-menu">
+            <img src="./assets/applelogo.svg" id="apple-logo" data-light="./assets/applelogo.svg" data-dark="./assets/applelogowhite.svg" alt="Apple Logo">
+            <span>Abhijith's Portfolio</span>
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Help</span>
+        </div>
+        <div class="right-menu">
+            <!-- Battery Icon -->
+            <div class="system-icon battery-icon">
+                <div class="battery-level">
+                    <span class="battery-percent">100%</span>
+                    <img src="./assets/battery.svg" alt="Battery">
+                </div>
+            </div>
+
+            <!-- WiFi Icon -->
+            <div class="system-icon wifi-icon">
+                <img src="./assets/wifi.svg" alt="WiFi">
+            </div>
+
+            <!-- Drag Toggle Switch -->
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="drag-toggle">
+                    <div class="slider round"></div>
+                </label>
+                <div class="tooltip drag-tooltip">Dragging disabled</div>
+            </div>
+
+            <!-- Theme switch -->
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <div class="slider round"></div>
+                </label>
+                <div class="tooltip theme-tooltip">Light mode</div>
+            </div>
+
+            <!-- Date -->
+            <div class="date" id="date"></div>
+
+            <!-- Time -->
+            <div class="time" id="time"></div>
+        </div>
+    </div>
+
+    <!-- Desktop Icons -->
+    <div class="desktop">
+        <div class="app-icon" data-app="about">
+            <img src="./assets/finder.png" alt="About Me">
+            <span>About Me</span>
+        </div>
+
+        <div class="app-icon">
+            <img src="./assets/folder.png" alt="Projects">
+            <span>Projects</span>
+        </div>
+
+        <div class="app-icon">
+            <img src="./assets/folder.png" alt="Certificates">
+            <span>Certificates</span>
+        </div>
+
+        <div class="app-icon">
+            <img src="./assets/folder.png" alt="Skills">
+            <span>Skills</span>
+        </div>
+
+        <div class="app-icon">
+            <img src="./assets/Notes.png" alt="Resume">
+            <span>Resume</span>
+        </div>
+    </div>
+
+    <!-- Windows -->
+    <div id="about-window" class="window" style="display: none;">
+        <div class="window-header">
+            <div class="window-controls">
+                <span class="close" onclick="closeWindow('about')"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <span class="window-title">About Me</span>
+        </div>
+        <div class="window-content">
+            <!-- Add your about me content here -->
+        </div>
+    </div>
+
+    <!-- Dock -->
+    <div class="dock">
+        <nav class="blocks">
+            <a href="https://github.com/Abhitatmez" target="_blank" class="block" style="--bg: var(--gradient-3);">
+                <div class="block__item">
+                    <img src="./assets/github.png" alt="GitHub">
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/abhijithshanmuganathan/" target="_blank" class="block" style="--bg: var(--gradient-4);">
+                <div class="block__item">
+                    <img src="./assets/linkedin.jpg" alt="LinkedIn">
+                </div>
+            </a>
+            <a href="https://leetcode.com/u/abhijithtatme/" target="_blank" class="block" style="--bg: var(--gradient-5);">
+                <div class="block__item">
+                    <img src="./assets/leetcode.png" alt="LeetCode">
+                </div>
+            </a>
+            <a href="https://www.codechef.com/users/abhijithtatme" target="_blank" class="block" style="--bg: var(--gradient-6);">
+                <div class="block__item">
+                    <img src="./assets/codechef.jpg" alt="CodeChef">
+                </div>
+            </a>
+            <a href="https://hackerrank.com/42612003_AIR" target="_blank" class="block" style="--bg: var(--gradient-7);">
+                <div class="block__item">
+                    <img src="./assets/hackerrank.png" alt="HackerRank">
+                </div>
+            </a>
+            <a href="#" onclick="openGmailWindow(event)" class="block" style="--bg: var(--gradient-8);">
+                <div class="block__item">
+                    <img src="./assets/gmail.png" alt="Gmail">
+                </div>
+            </a>
+            <a href="https://twitter.com/abhijithtatme" target="_blank" class="block" style="--bg: var(--gradient-9);">
+                <div class="block__item">   
+                    <img src="./assets/twitter.png" alt="Twitter">
+                </div>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Add this somewhere in your HTML, probably at the end of the body -->
+    <div id="gmailWindow" class="mac-window" style="display: none;">
+        <div class="titlebar">
+            <div class="buttons">
+                <div class="close"></div>
+                <div class="minimize"></div>
+                <div class="zoom"></div>
+            </div>
+            <div class="title">Contact Me</div>
+        </div>
+        <div class="content">
+            <p>Email: abhijithtatme@gmail.com</p>
+        </div>
+        <div class="fullscreen-message">This window cannot be maximized</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
