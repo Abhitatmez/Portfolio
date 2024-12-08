@@ -14,7 +14,9 @@ The first screen you encounter is the **Introduction Window**, where you can lea
 ## 📜 Menu Bar
 The **Menu Bar** offers essential features for navigating the portfolio, designed with macOS aesthetics in mind.  
 ![Menu 1](images/menu1.png)  
+**left end** 
 ![Menu 2](images/menu2.png)  
+**right end**
 ![Menu 3](images/menu3.png)
 
 ### Key Features in the Menu Bar:
