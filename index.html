@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Abhijith - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="./assets/abhi logo white.svg" sizes="12x12">
+</head>
+<body>
+    <!-- Top Menu Bar -->
+    <div class="menu-bar">
+        <div class="left-menu">
+            <img src="./assets/abhi logo black.svg" id="apple-logo" data-light="./assets/abhi logo black.svg" data-dark="./assets/abhi logo white.svg" alt="Apple Logo">
+            <span>Abhijith's Portfolio</span>
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <div class="menu-item">
+                <span>Help</span>
+                <div class="dropdown-menu">
+                    <div class="dropdown-item">Theme Slider: Toggle between Light/Dark mode</div>
+                    <div class="dropdown-item">Drag Slider: Enable/Disable icon dragging</div>
+                    <div class="dropdown-item">Double-click: Open/Close apps (when drag is off)</div>
+                    <div class="dropdown-item">Click the red button to close apps</div>
+                    <div class="dropdown-item">Double-click icons when drag is disabled</div>
+                </div>
+            </div>
+        </div>
+        <div class="right-menu">
+            <!-- Battery Icon -->
+            <div class="system-icon battery-icon">
+                <div class="battery-level">
+                    <span class="battery-percent">100%</span>
+                    <img src="./assets/battery.svg" alt="Battery">
+                </div>
+            </div>
+
+            <!-- WiFi Icon -->
+            <div class="system-icon wifi-icon">
+                <img src="./assets/wifi.svg" alt="WiFi">
+            </div>
+
+            <!-- Drag Toggle Switch -->
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="drag-toggle">
+                    <div class="slider round"></div>
+                </label>
+                <div class="tooltip drag-tooltip">Dragging disabled</div>
+            </div>
+
+            <!-- Theme switch -->
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <div class="slider round"></div>
+                </label>
+                <div class="tooltip theme-tooltip">Light mode</div>
+            </div>
+
+            <!-- Date -->
+            <div class="date" id="date"></div>
+
+            <!-- Time -->
+            <div class="time" id="time"></div>
+        </div>
+    </div>
+
+    <!-- Desktop Icons -->
+    <div class="desktop">
+        <div class="app-icon" data-app="about">
+            <img src="./assets/finder.png" alt="About Me" loading="lazy">
+            <span>About Me</span>
+        </div>
+
+        <div class="app-icon" data-app="projects">
+            <img src="./assets/folder.png" alt="Projects">
+            <span>Projects</span>
+        </div>
+
+        <div class="app-icon" data-app="certificates">
+            <img src="./assets/folder.png" alt="Certificates">
+            <span>Certificates</span>
+        </div>
+
+        <div class="app-icon" data-app="skills">
+            <img src="./assets/folder.png" alt="Skills">
+            <span>Skills</span>
+        </div>
+
+        <div class="app-icon" data-app="resume">
+            <img src="./assets/Notes.png" alt="Resume">
+            <span>Resume</span>
+        </div>
+    </div>
+
+    <!-- Windows -->
+    <div id="about-window" class="window" style="display: none;">
+        <div class="window-header">
+            <div class="window-controls">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <span class="window-title">About Me</span>
+        </div>
+        <div class="window-content">
+            <div class="about-container">
+                <!-- Who am I? -->
+                <div class="info-section">
+                    <h2>🪪 Who am I?</h2>
+                    <p>I’m Abhijith S, a student at Sathyabama University, currently doing my Bachelor's in Computer Science with a specialization in AI and Robotics. I enjoy problem-solving, design, and exploring creative solutions to various challenges.</p>
+                </div>
+
+                <!-- Where am I from? -->
+                <div class="info-section">
+                    <h2>🏠 Where am I from?</h2>
+                    <p>I grew up in Trichy, Tamil Nadu, and began my academic journey there.</p>
+                    <ul class="education-list">
+                        <li>Completed my 10th grade at Montfort School, scoring 83%.</li>
+                        <li>Continued at Montfort School for 12th grade, securing 80%.</li>
+                        <li>Currently pursuing a Bachelor’s in AI and Robotics at Sathyabama Institute of Science and Technology, Chennai. I have completed Semester 4 with a CGPA of 9.43.</li>
+                    </ul>
+                </div>
+
+                <!-- What do I like? -->
+                <div class="info-section">
+                    <h2>❤️ What do I like?</h2>
+                    <p>Aside from my technical interests, I love:</p>
+                    <ul class="interests-list">
+                        <li><strong>Designing:</strong> Using tools like Figma, Canva, and Adobe Photoshop for UI/UX and creative projects.</li>
+                        <li><strong>Solving Problems:</strong> Tackling challenges and constantly looking for ways to innovate.</li>
+                        <li><strong>Public Speaking:</strong> Participating in MUN conferences to refine communication and leadership skills.</li>
+                        <li><strong>Photography and Photo Editing:</strong> Capturing and enhancing moments creatively.</li>
+                        <li><strong>Cooking:</strong> Experimenting in the kitchen is one of my favorite creative outlets.</li>
+                    </ul>
+                </div>
+
+                <!-- What am I doing? -->
+                <div class="info-section">
+                    <h2>🚀 What am I doing?</h2>
+                    <p>I’m currently working on a project involving the DHT11 sensor, where I’ve connected it to an Arduino to monitor temperature and humidity. I’m taking it further by integrating the system with a MongoDB server using an ESP8266 module. This approach enables me to store and manage sensor data effectively, combining IoT and database management to create a seamless and scalable solution.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dock -->
+    <div class="dock">
+        <nav class="blocks">
+            <a href="https://github.com/Abhitatmez" target="_blank" class="block" style="--bg: var(--gradient-3);">
+                <div class="block__item">
+                    <img src="./assets/github.png" alt="GitHub">
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/abhijithshanmuganathan/" target="_blank" class="block" style="--bg: var(--gradient-4);">
+                <div class="block__item">
+                    <img src="./assets/linkedin.jpg" alt="LinkedIn">
+                </div>
+            </a>
+            <a href="https://leetcode.com/u/abhijithtatme/" target="_blank" class="block" style="--bg: var(--gradient-5);">
+                <div class="block__item">
+                    <img src="./assets/leetcode.png" alt="LeetCode">
+                </div>
+            </a>
+            <a href="https://www.codechef.com/users/abhijithtatme" target="_blank" class="block" style="--bg: var(--gradient-6);">
+                <div class="block__item">
+                    <img src="./assets/codechef.jpg" alt="CodeChef">
+                </div>
+            </a>
+            <a href="https://hackerrank.com/42612003_AIR" target="_blank" class="block" style="--bg: var(--gradient-7);">
+                <div class="block__item">
+                    <img src="./assets/hackerrank.png" alt="HackerRank">
+                </div>
+            </a>
+            <a href="#" onclick="openGmailWindow(event)" class="block" style="--bg: var(--gradient-8);">
+                <div class="block__item">
+                    <img src="./assets/gmail.png" alt="Gmail">
+                </div>
+            </a>
+            <a href="https://twitter.com/abhijithtatme" target="_blank" class="block" style="--bg: var(--gradient-9);">
+                <div class="block__item">   
+                    <img src="./assets/twitter.png" alt="Twitter">
+                </div>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Add this somewhere in your HTML, probably at the end of the body -->
+    <div id="gmailWindow" class="mac-window" style="display: none;">
+        <div class="titlebar">
+            <div class="buttons">
+                <div class="close"></div>
+                <div class="minimize"></div>
+                <div class="zoom"></div>
+            </div>
+            <div class="title">Contact Me</div>
+        </div>
+        <div class="content">
+            <p>Email: abhijithtatme@gmail.com</p>
+        </div>
+        <div class="fullscreen-message">This window cannot be maximized</div>
+    </div>
+
+    <!-- Projects Window -->
+    <div id="projects-window" class="window" style="display: none;">
+        <div class="window-header">
+            <div class="window-controls">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <span class="window-title">Projects</span>
+        </div>
+        <div class="window-content">
+            <!-- Add your projects content here -->
+        </div>
+    </div>
+
+    <!-- Certificates Window -->
+    <div id="certificates-window" class="window" style="display: none;">
+        <div class="window-header">
+            <div class="window-controls">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <span class="window-title">Certificates</span>
+        </div>
+        <div class="window-content certificates-content">
+            <div class="certificates-container">
+                <a href="https://drive.google.com/file/d/1OaBM-f2C_tfAIYj8c4c92YloXdkqkv76/view?usp=sharing" target="_blank" class="certificate-link">
+                    <img src="./assets/cisco1.jpg" alt="Cisco Certificate 1" class="certificate-image" loading="lazy">
+                    <div class="hover-text">Click to Verify</div>
+                </a>
+                <a href="https://drive.google.com/file/d/1TQ_THltyPc5VCWJyxXESnw4lX7rhT6Z2/view?usp=sharing" target="_blank" class="certificate-link">
+                    <img src="./assets/cisco2.jpg" alt="Cisco Certificate 2" class="certificate-image" loading="lazy">
+                    <div class="hover-text">Click to Verify</div>
+                </a>
+                <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL23CS79S2533125410019812" target="_blank" class="certificate-link">
+                    <img src="./assets/dbms.jpg" alt="DBMS Certificate" class="certificate-image" loading="lazy">
+                    <div class="hover-text">Click to Verify</div>
+                </a>
+                <a href="https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS115S145250105503891345" target="_blank" class="certificate-link">
+                    <img src="./assets/iot.jpg" alt="IoT Certificate" class="certificate-image" loading="lazy">
+                    <div class="hover-text">Click to Verify</div>
+                </a>
+                <a href="https://drive.google.com/file/d/17S5_DXGHK8jp0y04MoPJcd7ZYd_m04Wc/view?usp=sharing" target="_blank" class="certificate-link">
+                    <img src="./assets/cv.jpg" alt="Computer Vision Certificate" class="certificate-image" loading="lazy">
+                    <div class="hover-text">Click to Verify</div>
+                </a>
+                <a href="https://drive.google.com/file/d/1GA_mX_2JgedJrdHu5gBWa2_VEebJp12E/view?usp=sharing" target="_blank" class="certificate-link">
+                    <img src="./assets/appbuilding.jpg" alt="App Building Certificate" class="certificate-image" loading="lazy">
+                    <div class="hover-text">Click to Verify</div>
+                </a>
+                <a href="https://drive.google.com/file/d/18Y3E0JGuE_jmXK4bugTL3AeZHDJH2uqa/view?usp=sharing" target="_blank" class="certificate-link">
+                    <img src="./assets/machine learning.jpg" alt="Machine Learning Certificate" class="certificate-image" loading="lazy">
+                    <div class="hover-text">Click to Verify</div>
+                </a>
+                <a href="https://drive.google.com/file/d/1PTDzExaiiEQ4nnU8ttuCNjTdcJxHYoHA/view?usp=sharing" target="_blank" class="certificate-link">
+                    <img src="./assets/nasscom.jpg" alt="NASSCOM Certificate" class="certificate-image" loading="lazy">
+                    <div class="hover-text">Click to Verify</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Window -->
+    <div id="skills-window" class="window" style="display: none;">
+        <div class="window-header">
+            <div class="window-controls">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <span class="window-title">Skills</span>
+        </div>
+        <div class="window-content">
+            <div class="skills-container">
+                <!-- Languages Section -->
+                <div class="skills-section">
+                    <h2>Languages</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <a href="https://www.python.org" target="_blank">
+                                <img src="./assets/py.png" alt="Python">
+                                <span>Python</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170" target="_blank">
+                                <img src="./assets/c.png" alt="C">
+                                <span>C</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://isocpp.org/get-started" target="_blank">
+                                <img src="./assets/cpp.png" alt="C++">
+                                <span>C++</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://www.java.com/en/download/help/whatis_java.html" target="_blank">
+                                <img src="./assets/java.png" alt="Java">
+                                <span>Java</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases Section -->
+                <div class="skills-section">
+                    <h2>Databases</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <a href="https://www.mongodb.com/" target="_blank">
+                                <img src="./assets/mongodb.png" alt="MongoDB">
+                                <span>MongoDB</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://www.mysql.com/" target="_blank">
+                                <img src="./assets/mysql.png" alt="MySQL">
+                                <span>MySQL</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools Section -->
+                <div class="skills-section">
+                    <h2>Tools</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <a href="https://docs.python.org/3/library/tkinter.html" target="_blank">
+                                <img src="./assets/tkinter.png" alt="Tkinter">
+                                <span>Tkinter</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://www.figma.com/" target="_blank">
+                                <img src="./assets/figma.png" alt="Figma">
+                                <span>Figma</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://www.qt.io/" target="_blank">
+                                <img src="./assets/qt.png" alt="PyQt">
+                                <span>PyQt</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://inkscape.org/" target="_blank">
+                                <img src="./assets/inkscape.png" alt="Inkscape">
+                                <span>Inkscape</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://code.visualstudio.com/" target="_blank">
+                                <img src="./assets/vscode.png" alt="VSCode">
+                                <span>VS Code</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://openai.com/index/chatgpt/" target="_blank">
+                                <img src="./assets/chatgpt.png" alt="ChatGPT">
+                                <span>ChatGPT</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://git-scm.com/" target="_blank">
+                                <img src="./assets/git.png" alt="Git">
+                                <span>Git</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://workspace.google.com/intl/en_in/products/sheets/" target="_blank">
+                                <img src="./assets/sheets.png" alt="Sheets">
+                                <span>Sheets</span>
+                            </a>
+                        </div>
+                        <div class="skill-item">
+                            <a href="https://www.canva.com/" target="_blank">
+                                <img src="./assets/canva.png" alt="Canva">
+                                <span>Canva</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Window -->
+    <div id="resume-window" class="window" style="display: none;">
+        <div class="window-header">
+            <div class="window-controls">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <span class="window-title">Resume</span>
+        </div>
+        <div class="window-content resume-content">
+            <div class="resume-container">
+                <img src="./assets/resume.jpg" alt="Resume" class="resume-image">
+                <a href="https://drive.google.com/file/d/1LyXKfzMPjoc6RlyBRLFXhVo73wRDHILb/view?usp=sharing" target="_blank" class="macos-button">
+                    Click to Download
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="intro-window" class="intro-window">
+        <div class="intro-content">
+            <!-- Section 1 -->
+            <div class="intro-section" data-section="1">
+                <h2>Welcome to My macOS Portfolio!</h2>
+                <p>This isn't your typical portfolio website - it's an interactive macOS-inspired experience. I wanted to create something unique that showcases both my work and my creativity.</p>
+                <p>Feel free to explore and interact with the interface just like you would on a real Mac!</p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="intro-section" data-section="2" style="display: none;">
+                <h2>How to Navigate</h2>
+                <p>Click on any app icon to open its window. You can:</p>
+                <ul>
+                    <li>Move windows by dragging their top bar</li>
+                    <li>Resize windows using the maximize button</li>
+                    <li>Close windows using the red button</li>
+                    <li>Minimize windows to the dock</li>
+                </ul>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="intro-section" data-section="3" style="display: none;">
+                <h2>Customization</h2>
+                <p>Make it yours:</p>
+                <ul>
+                    <li>Toggle between light and dark mode using the theme selector</li>
+                    <li>Drag windows anywhere on the screen</li>
+                    <li>Arrange icons as you prefer</li>
+                </ul>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="intro-section" data-section="4" style="display: none;">
+                <h2>The Menubar</h2>
+                <p>Just like macOS, the menubar contains dynamic elements:</p>
+                <ul>
+                    <li>Real-time date and time display</li>
+                    <li>Live battery status and percentage</li>
+                    <li>WiFi status</li>
+                    <li>Theme toggle (dark/light)</li>
+                    <li>Drag icons toggle (enabled/disabled)</li>
+                </ul>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="intro-section" data-section="5" style="display: none;">
+                <h2>Available Apps</h2>
+                <p>Click these icons to explore:</p>
+                <ul>
+                    <li>About Me - Learn about who I am</li>
+                    <li>Resume - View my professional experience</li>
+                    <li>Certificates - Check my certifications</li>
+                    <li>Projects - See what I've built</li>
+                    <li>Contact - Check the menubar for contact options</li>
+                </ul>
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="intro-nav">
+                <button id="prev-btn" class="intro-btn" disabled>Previous</button>
+                <span class="page-indicator">1/5</span>
+                <button id="next-btn" class="intro-btn">Next</button>
+                <button id="skip-btn" class="intro-btn skip-btn">Skip Tour</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
