@@ -5,9 +5,11 @@ Welcome to my **macOS-inspired portfolio**! This interactive project is designed
 ---
 
 ## 🖥️ Introduction Window
-The first screen you encounter is the **Introduction Window**, where you can learn about the purpose of this portfolio and how to navigate through the macOS-inspired UI.  
-![Intro 1](images/intro1.png)  
-![Intro 2](images/intro2.png)  
+The first screen you encounter is the **Introduction Window**, where you can learn about the purpose of this portfolio and how to navigate through the macOS-inspired UI.
+
+<img src="images/intro1.png" alt="Intro 1" style="border: 2px solid #ddd; border-radius: 8px; margin: 10px 0;" />
+
+<img src="images/intro2.png" alt="Intro 2" style="border: 2px solid #ddd; border-radius: 8px; margin: 10px 0;" />
 
 ---
 
@@ -80,4 +82,3 @@ This portfolio boasts several dynamic features, designed to enhance user interac
 8. **Draggable Windows**: All windows are draggable, allowing flexible customization of your workspace.
 
 ---
-
