@@ -1,3 +1,5 @@
+<img src="images/portposter1.jpg" alt="Portfolio Poster" style="width: 100%; border: 2px solid #ddd; border-radius: 8px; margin: 20px 0;" />
+
 # macOS-Inspired Portfolio Website
 
 Welcome to my **macOS-inspired portfolio**! This interactive project is designed to showcase my skills, projects, and creativity, mimicking the sleek, user-friendly macOS interface. Explore the various features below and get to know more about me through this unique experience.
@@ -62,7 +64,7 @@ The **Taskbar** provides quick access to my professional and social platforms:
 - **HackerRank**  
 - **Gmail**  
 - **Twitter**  
-
+        
 ![Taskbar](images/taskbar.png)
 
 These icons allow you to explore my work and get in touch with me directly.
@@ -79,6 +81,6 @@ This portfolio boasts several dynamic features, designed to enhance user interac
 5. **Window Layering**: New windows always appear on top, ensuring easy access.  
 6. **Rotating Wallpaper**: Dynamic wallpapers that rotate in a cycle for visual variety.  
 7. **Adaptive Window Colors**: Window colors adjust based on the selected theme (light or dark).  
-8. **Draggable Windows**: All windows are draggable, allowing flexible customization of your workspace.
+8. **Draggable Windows**: All windows are draggable, allowing flexible customization of your workspace.  
 
 ---
