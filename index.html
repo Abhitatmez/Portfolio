@@ -205,7 +205,7 @@
     </div>
 
     <!-- Projects Window -->
-    <div id="projects-window" class="window" style="display: none;">
+    <div id="projects-window" class="window" style="display: none; width: 1000px; height: 320px;">
         <div class="window-header">
             <div class="window-controls">
                 <span class="close"></span>
@@ -215,10 +215,50 @@
             <span class="window-title">Projects</span>
         </div>
         <div class="window-content">
-            <div class="coming-soon-container">
-                <img src="./assets/folder.png" alt="Projects" style="width: 128px; margin-bottom: 20px;">
-                <h2>Coming Soon!</h2>
-                <p>My projects section is currently under construction. Check back soon to see my latest work!</p>
+            <div class="projects-container" style="padding: 15px; display: flex; flex-direction: row; gap: 30px; justify-content: center;">
+                <div class="project-card" style="width: 450px; transition: box-shadow 0.3s ease, transform 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; background: rgba(255,255,255,0.05);">
+                    <img src="./assets/celposter.jpg" alt="Project Name" class="project-poster" style="width: 100%; height: auto; display: block; margin: 0 auto; margin-bottom: 10px;">
+                    <div class="project-actions" style="padding: 8px; display: flex; justify-content: center; gap: 8px;">
+                        <a href="https://github.com/Abhitatmez/Celcius" target="_blank" class="project-button primary">
+                            <img src="./assets/repo.svg" alt="GitHub" style="width: 16px; height: 16px;">
+                            View on GitHub
+                        </a>
+                        <a href="https://celcius-kappa.vercel.app/" target="_blank" class="project-button secondary">
+                            <img src="./assets/demo.svg" alt="Demo" style="width: 16px; height: 16px;">
+                            Live Demo
+                        </a>
+                        <a class="project-button secondary">
+                            <img src="./assets/docs.svg" alt="Documentation" style="width: 16px; height: 16px;">
+                            Documentation
+                            <div class="hover-text">In progress...</div>
+                        </a>
+                    </div>
+                    <p style="padding: 8px; margin: 0; font-size: 13px; color: #666; text-align: center;">
+                        Celsius is an IoT project that uses an ESP8266 and a DHT11 sensor to monitor temperature and humidity. The data is uploaded to MongoDB and displayed in real time on a website.
+                    </p>
+                </div>
+
+                <div class="project-card" style="width: 450px; transition: box-shadow 0.3s ease, transform 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; background: rgba(255,255,255,0.05);">
+                    <img src="./assets/portposter1.jpg" alt="Portfolio Project" class="project-poster" style="width: 100%; height: auto; display: block; margin: 0 auto; margin-bottom: 10px;">
+                    <div class="project-actions" style="padding: 8px; display: flex; justify-content: center; gap: 8px;">
+                        <a href="https://github.com/Abhitatmez/Portfolio" target="_blank" class="project-button primary">
+                            <img src="./assets/repo.svg" alt="GitHub" style="width: 16px; height: 16px;">
+                            View on GitHub
+                        </a>
+                        <a href="https://abhitatmez.github.io/Portfolio/" target="_blank" class="project-button secondary">
+                            <img src="./assets/demo.svg" alt="Demo" style="width: 16px; height: 16px;">
+                            Live Demo
+                        </a>
+                        <a class="project-button secondary">
+                            <img src="./assets/docs.svg" alt="Documentation" style="width: 16px; height: 16px;">
+                            Documentation
+                            <div class="hover-text">In progress...</div>
+                        </a>
+                    </div>
+                    <p style="padding: 8px; margin: 0; font-size: 13px; color: #666; text-align: center;">
+                        A macOS-inspired portfolio website built with HTML, CSS, and JavaScript. Features interactive windows, dark/light mode, draggable elements, and a responsive design that mimics the macOS experience.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -363,7 +403,7 @@
                         </div>
                         <div class="skill-item">
                             <a href="https://code.visualstudio.com/" target="_blank">
-                                <img src="./assets/vscode.png" alt="VSCode">
+                                <img src="./assets/vscode.png" alt="VS Code">
                                 <span>VS Code</span>
                             </a>
                         </div>
