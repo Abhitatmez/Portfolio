@@ -1938,3 +1938,174 @@ html[data-theme='dark'] .coming-soon-container p {
     color: #ccc;
 }
     
+/* Add these new styles at the end of your existing CSS file */
+
+/* Project Window Styles */
+.projects-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y:auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    max-height: calc(100% - 32px); /* Subtract header height */
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    min-height: 0; /* Prevent overflow */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    
+}
+
+.project-poster {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.project-actions {
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.project-button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.project-button.primary {
+    background: #007AFF;
+    color: white;
+}
+
+.project-button.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #007AFF;
+    border: 1px solid #007AFF;
+}
+
+.project-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme adjustments */
+html[data-theme='dark'] .project-card {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .project-actions {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] .project-button.secondary {
+    background: rgba(0, 0, 0, 0.2);
+}
+/* Project card theme adjustments */
+.project-card {
+    background: rgba(60, 60, 60, 0.1);  /* Slightly dark in light mode */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode specific */
+body:not(.dark-mode) .project-card {
+    background: rgba(60, 60, 60, 0.1);
+}
+
+body:not(.dark-mode) .project-actions {
+    background: rgba(60, 60, 60, 0.05);
+}
+
+body:not(.dark-mode) .project-button.secondary {
+    color: #007AFF;
+    border-color: #007AFF;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Dark mode specific */
+body.dark-mode .project-card {
+    background: rgba(255, 255, 255, 0.1);  /* Lighter in dark mode */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .project-actions {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .project-button.secondary {
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Project button hover text styling */
+.project-button .hover-text {
+    position: absolute;
+    top: -40px;  /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    backdrop-filter: blur(5px);
+}
+
+.project-button {
+    position: relative;  /* Needed for absolute positioning of hover-text */
+}
+
+.project-button:hover .hover-text {
+    opacity: 1;
+    top: -45px;  /* Slight upward animation */
+}
+
+/* Dark theme adjustments */
+html[data-theme='dark'] .project-button .hover-text {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+#projects-window {
+    width: 800px;
+    min-width: 600px;
+    height: 80vh;
+    max-height: 800px;
+}
+
+.projects-container {
+    overflow-y: auto;
+    height: calc(80vh - 32px);  /* Subtract header height */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
